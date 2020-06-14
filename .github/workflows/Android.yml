@@ -18,7 +18,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew quickBuild
+
+    - run: find . -name \*apk
 
     - uses: actions/upload-artifact@v2
       with:
