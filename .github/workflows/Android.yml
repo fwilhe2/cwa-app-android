@@ -26,4 +26,8 @@ jobs:
       with:
         name: Corona-Warn-App-device-release-unsigned
         path: Corona-Warn-App/build/outputs/apk/device/release/Corona-Warn-App-device-release-unsigned.apk
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Corona-Warn-App-device-debug
+        path: Corona-Warn-App/build/outputs/apk/device/debug/Corona-Warn-App-device-debug.apk
         
