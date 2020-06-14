@@ -18,16 +18,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew quickBuild
+      run: ./gradlew build
 
     - run: find . -name \*apk
 
     - uses: actions/upload-artifact@v2
       with:
-        name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: Corona-Warn-App-device-release-unsigned
+        path: Corona-Warn-App/build/outputs/apk/device/release/Corona-Warn-App-device-release-unsigned.apk
         
-    - uses: actions/upload-artifact@v2
-      with:
-        name: app-release-unsigned
-        path: app/build/outputs/apk/release/app-release-unsigned.apk
